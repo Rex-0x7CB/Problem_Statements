@@ -37,6 +37,13 @@ def main():
 	
 	print("\n")
 
+	if side > col:	#Assumption: col is always smaller than row
+		side = col
+	elif side < 0:
+		print("Cannot create a submatrix with such side")
+		return
+
+
 	maxim = 0
 	max_index = (0,0)
 	for i in range(0, row-side+1):
